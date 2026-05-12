@@ -3,9 +3,26 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-
+const isUniversityEmail = (email) => {
+  const validDomains = ['.unilag.edu.ng', '.edu.ng', '.ac.ng'];
+  return validDomains.some(domain => email.toLowerCase().endsWith(domain));
+};
 function App() {
   const [count, setCount] = useState(0)
+  const [email, setEmail] = useState('');
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    
+    // This uses the rule we pasted in Step 1
+    if (!isUniversityEmail(email)) {
+      alert("Access Denied: Please use your Unilag or Nigerian university email.");
+      return;
+    }
+
+    alert("Email valid! Sending your login link to: " + email);
+    // Later, you will add the Supabase code here
+  };
 
   return (
     <>
