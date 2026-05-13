@@ -4,7 +4,7 @@ import {
   Plus, ArrowRight, ArrowLeft, MapPin, Check, X, Wind, Users,
   Zap, Bot, Shield, Trash2, Eye, Database, Clock, Award, Flame, TrendingUp, BarChart3
 } from "lucide-react";
-import campusHero from "@/assets/campus-hero.jpg";
+import campusHero from "../assets/campus-hero.jpg";
 
 type Screen = "landing" | "privacy" | "home" | "report" | "success" | "notifications";
 
